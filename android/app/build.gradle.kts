@@ -3,6 +3,7 @@ plugins {
     id("kotlin-android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
+    id ("com.google.gms.google-services")
 }
 
 android {
@@ -42,3 +43,16 @@ android {
 flutter {
     source = "../.."
 }
+compileOptions {
+    sourceCompatibility JavaVersion.VERSION_11
+            targetCompatibility JavaVersion.VERSION_11
+}
+}
+
+dependencies {
+implementation 'com.google.android.gms:play-services-auth:20.7.0'
+implementation 'androidx.appcompat:appcompat:1.6.1'
+implementation 'com.google.android.material:material:1.9.0'
+// Your other dependencies...
+}
+
